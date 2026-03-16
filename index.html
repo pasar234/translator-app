@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penerjemah Indonesia - Inggris - Arab</title>
+    
+    <!-- CSS utama - LETAKKAN DISINI -->
     <link rel="stylesheet" href="style.css">
+    
     <!-- Font Awesome untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Font untuk Arab (opsional) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Scheherazade&display=swap">
+    
+    <!-- Meta tags untuk SEO dan responsive -->
+    <meta name="description" content="Aplikasi penerjemah bahasa Indonesia ke Inggris dan Arab online">
+    <meta name="keywords" content="penerjemah, translator, indonesia, inggris, arab, bahasa">
+    <meta name="author" content="Your Name">
 </head>
 <body>
     <div class="container">
         <header>
             <h1><i class="fas fa-language"></i> Penerjemah Bahasa</h1>
             <p>Indonesia - Inggris - Arab</p>
+            <div class="shortcut-hint">
+                <i class="fas fa-keyboard"></i> 
+                <kbd>Ctrl</kbd> + <kbd>Enter</kbd> = Terjemah | 
+                <kbd>Esc</kbd> = Hapus | 
+                <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> = Berhenti
+            </div>
         </header>
 
         <div class="translator-container">
             <!-- Bagian input -->
             <div class="input-section">
                 <div class="language-header">
-                    <span class="language-label">Bahasa Indonesia</span>
-                    <button class="clear-btn" id="clearBtn" title="Hapus teks">
+                    <span class="language-label">
+                        Bahasa Indonesia
+                        <span class="demo-badge">Demo</span>
+                    </span>
+                    <button class="clear-btn" id="clearBtn" title="Hapus teks (Esc)">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
@@ -34,7 +54,7 @@
 
             <!-- Tombol kontrol -->
             <div class="control-buttons">
-                <button class="translate-btn" id="translateBtn">
+                <button class="translate-btn" id="translateBtn" title="Terjemahkan (Ctrl+Enter)">
                     <i class="fas fa-arrow-right"></i> Terjemahkan
                 </button>
                 <button class="swap-btn" id="swapBtn" title="Tukar bahasa target">
@@ -71,13 +91,13 @@
 
         <!-- Fitur tambahan -->
         <div class="extra-features">
-            <button class="feature-btn" id="speakIndonesian">
+            <button class="feature-btn" id="speakIndonesian" title="Dengarkan bahasa Indonesia">
                 <i class="fas fa-volume-up"></i> Dengarkan Indonesia
             </button>
-            <button class="feature-btn" id="speakEnglish">
+            <button class="feature-btn" id="speakEnglish" title="Dengarkan bahasa Inggris">
                 <i class="fas fa-volume-up"></i> Dengarkan Inggris
             </button>
-            <button class="feature-btn" id="speakArabic">
+            <button class="feature-btn" id="speakArabic" title="Dengarkan bahasa Arab">
                 <i class="fas fa-volume-up"></i> Dengarkan Arab
             </button>
         </div>
@@ -85,10 +105,13 @@
         <!-- Catatan -->
         <div class="note">
             <p><i class="fas fa-info-circle"></i> Catatan: Aplikasi ini menggunakan API terjemahan. Pastikan terhubung ke internet.</p>
-            <p class="api-status" id="apiStatus">Status: Siap</p>
+            <p class="api-status" id="apiStatus">
+                <i class="fas fa-wifi"></i> Status: Siap
+            </p>
         </div>
     </div>
 
+    <!-- JavaScript - letakkan di akhir sebelum tutup body -->
     <script src="config.js"></script>
     <script src="translator.js"></script>
 </body>
